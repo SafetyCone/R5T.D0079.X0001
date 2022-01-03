@@ -1,0 +1,2 @@
+# R5T.D0079.X0001
+IVisualStudioProjectFileOperator public, common extensions.
