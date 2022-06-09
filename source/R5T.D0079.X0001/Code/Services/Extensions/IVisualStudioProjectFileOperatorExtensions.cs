@@ -14,6 +14,17 @@ namespace System
     public static class IVisualStudioProjectFileOperatorExtensions
     {
         public static Task Create(this IVisualStudioProjectFileOperator visualStudioProjectFileOperator,
+            string projectFilePath,
+            VisualStudioProjectType projectType)
+        {
+            var projectTypeString = projectType.ToString_ForProjectFileOperator();
+
+            return visualStudioProjectFileOperator.Create(
+                projectTypeString,
+                projectFilePath);
+        }
+
+        public static Task Create(this IVisualStudioProjectFileOperator visualStudioProjectFileOperator,
             string projectType,
             string projectFilePath)
         {
